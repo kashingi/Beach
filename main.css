@@ -1,0 +1,485 @@
+/*=======================
+ 1. Navbar
+ 2. home
+ 3. About us
+ 4. Contact us
+ 5. services
+ 6. beaches
+ ========================*/
+
+body {
+    font-family: 'Muli', sans-serif;
+    height: 600px;
+}
+
+
+/* ==========================
+   [01]. Navbar
+========================== */
+
+.navbar {
+    background: skyblue !important;
+    padding: 30px 0;
+}
+
+.navbar .nav-item {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 40px;
+}
+
+.navbar .nav-item .nav-link {
+    color: #7d8792;
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #ffffff;
+    background: blueviolet;
+    border-radius: 10px;
+}
+
+.navbar .navbar-nav .dropdown .dropdown-menu {
+    margin-top: 25px;
+    background: #212222;
+}
+
+.navbar .navbar-nav .dropdown span {
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+.navbar .navbar-nav .dropdown .dropdown-menu a {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.navbar .navbar-nav .dropdown .dropdown-menu a:hover {
+    background: #e0a80d;
+}
+
+
+/* ==========================
+   1. home
+========================== */
+
+.home {
+    background: url(images/kilifi.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: calc(100vh);
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.home .particels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.animated-headlines .cd-headline span {
+    font-size: 50px;
+    font-family: 'Muli', sans-serif !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #e0a80d;
+}
+
+.home .home-content .hello {
+    font-size: 20px;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.home .home-content h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 10px 0;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    display: inline-block;
+    margin: 5px 0 20px 0;
+}
+
+.home .home-content .conte {
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 28px;
+    padding-right: 20px;
+    position: absolute;
+    top: 85%;
+    left: 40%;
+}
+
+.home .conte .btn {
+    background: #e0a80d;
+    position: absolute;
+    top: 240px;
+    border: 2px solid #e0a80d;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 18px;
+    text-decoration: none;
+    z-index: 200;
+    cursor: progress;
+}
+
+
+/*===========================
+1. About us
+===========================*/
+
+.about-us {
+    background: url(images/kilifi8.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: calc(100vh);
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.about-us img {
+    padding-right: 50px;
+}
+
+.about-us h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #e0a80d;
+}
+
+.about-us p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #bac8d3;
+    line-height: 28px;
+    margin: 20px 0 40px 60px;
+}
+
+.about-us .btn-1 {
+    background: #e0a80d;
+    border-radius: 35px;
+    padding: 10px 30px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.about-us .btn-2 {
+    border: 2px solid #e0a80d;
+    border-radius: 35px;
+    padding: 10px 50px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.about-us h3 {
+    font-size: 20px;
+    font-weight: 800;
+    font-variant: small-caps;
+    background: blueviolet;
+    color: #212222;
+    margin: 30px;
+}
+
+.about-us .vip {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+}
+
+.about-us .business {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+}
+
+.about-us .normal {
+    position: absolute;
+    top: 70%;
+    left: 80%;
+}
+
+.about-us .particels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ==========================
+4. Contact
+========================== */
+
+.contact-us {
+    margin-top: 80px;
+    padding: 0 0 140px 0;
+    background: #2d2e2e;
+}
+
+.contact-us h2 {
+    position: absolute;
+    left: 50%;
+    margin-top: 80px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #e0a80d;
+    margin-bottom: 60px;
+}
+
+.contact-us .contactInfo {
+    margin-top: 20px;
+    padding: 40px;
+    width: 70%;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: #fcf2f2;
+    border: 0;
+    border-radius: 15px;
+}
+
+.contact-us button.btn {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    background: #e0a80d;
+    color: #ffffff;
+    width: 100px;
+    margin-left: 30%;
+}
+
+.contact-us .information {
+    padding-left: 45px;
+}
+
+.contact-us .information span {
+    font-size: 25px;
+    color: #e0a80d;
+}
+
+.contact-us .information p {
+    font-size: 15px;
+    margin: 40px 0 20px 0;
+    color: #eee;
+}
+
+
+/* ==========================
+5. beaches
+========================== */
+
+.beach {
+    padding: 130px 0;
+    background: #2d2e2e;
+    height: calc(100vh);
+}
+
+.beach h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #e0a80d;
+    margin-bottom: 60px;
+}
+
+.beach .beac-item {
+    border-radius: 10px;
+    background: #212222;
+}
+
+.beach .conte .image {
+    position: relative;
+}
+
+.beach .conte .image img {
+    width: 100%;
+}
+
+.beach .conte .image a {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 5px 20px;
+    color: #ffffff;
+    background: #e0a80d;
+    border-radius: 35px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.beach .conte .beac-item {
+    padding: 25px;
+}
+
+.beach .conte h3 a {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 700;
+    color: #eee;
+    margin-bottom: 25px;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.beach .conte h4 {
+    font-size: 13px;
+    font-weight: 300;
+    color: #e0a80d;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.beach .conte p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #bdbfc0;
+    line-height: 26px;
+}
+
+.beach .beach-item .button {
+    background: #e0a80d;
+    font-size: 15px;
+    font-weight: 700;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.beach .beach-item .button:active {
+    background: blueviolet;
+    font-size: 20px;
+    font-weight: 800;
+    color: red;
+    transition: 1s;
+    transform: rotate(-90deg);
+}
+
+
+/*==================
+6. hotels
+===================*/
+
+.hotel {
+    background: url(images/kilifi5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 80px;
+    padding: 0 0 130px 0;
+    background: #eee;
+    height: calc(100vh);
+}
+
+.hotel h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #e0a80d;
+    margin-bottom: 60px;
+}
+
+.hotel .hotel-item p {
+    font-size: 14px;
+    color: black;
+    background: #eee;
+    font-weight: 400;
+    line-height: 26px;
+    padding: 0;
+    margin: 0;
+}
+
+.hotel .hotel-item .hotel-list {
+    background: #bac8d3;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.hotel .hotel-item table {
+    background: #7d8792;
+    margin: 20px;
+    width: 75%;
+}
+
+.hotel .hotel-item td {
+    background: #eee;
+    color: #212222;
+    font-variant: small-caps;
+}
+
+.hotel .hotel-item tr {
+    border: 2px solid red;
+}
+
+.hotel .hotel-item caption {
+    background: #e0a80d;
+    width: 120px;
+    border-radius: 15px;
+}
+
+.hotel .particels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*=====================
+7. services
+======================*/
+
+.service {
+    padding-bottom: 90px;
+    background: #2d2e2e;
+}
+
+.service h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #e0a80d;
+    margin-bottom: 60px;
+}
+
+.service .service-item {
+    padding: 40px;
+    margin-bottom: 30px;
+    background: #212222;
+}
+
+.service .service-item span {
+    font-size: 30px;
+    color: #e0a80d;
+}
+
+.service .service-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.service .service-item p {
+    font-size: 14px;
+    color: #bac8d3;
+    font-weight: 400;
+    line-height: 26px;
+    padding: 0;
+    margin: 0;
+}

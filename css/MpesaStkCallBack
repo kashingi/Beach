@@ -1,0 +1,66 @@
+<?php
+
+namespace App\Http\Controllers\mpesa;
+
+use App\Http\Controllers\Controller;
+use App\Models\Cart;
+use App\Models\orderDetails;
+use App\Models\orders;
+use App\Models\transactions;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+
+class mpesaresponse extends Controller
+{
+    public function mResponse(){
+                $req=request()->all();
+                $client=request()->userId;
+                // Log::info($req);
+
+               if( $req['Body']['stkCallback']['ResultCode']===0)
+               {
+
+                $MpesaReceiptNumber=$req['Body']['stkCallback']['CallbackMetadata']['Item'][1]['Value'];
+                $amount = $req['Body']['stkCallback']['CallbackMetadata']['Item'][0]['Value'];
+                $phoneNumber = $req['Body']['stkCallback']['CallbackMetadata']['Item'][4]['Value'];
+                
+            //Create a new order 
+                $order=new orders();
+                $order->CustomerId=$client;
+                $order->PaymentId=$MpesaReceiptNumber; 
+                $order->OrderNumber=rand(100,1000);
+                $order->save();
+
+                $order_id=$order->order_id ;
+                $orderedProduct=Cart::where('UserId',$client)->get();
+                //Populate order details
+                foreach($orderedProduct as $product){
+                   orderDetails::create(
+                       [  'orderId'=>$order_id,
+                           'product_id'=>$product->ProductId,
+                           'quantity'=>$product->Quantity,
+                           'unit_price'=>$product->TotalAmount,
+                           'discount'=>0,
+                           'total_amount'=>50,
+                       ]
+                       );
+                      $product->delete();
+                }
+
+                
+               
+               // Transaction details to transaction table
+                $payments=new transactions();
+                $payments->client_id = $client;
+                $payments->order_id = $order_id;
+                $payments->PhoneNumber = $phoneNumber;
+                $payments->ReceiptNumber = $MpesaReceiptNumber;
+                $payments->payment_method = 'Mpesa';
+                $payments->paid_amount = $amount;
+                $payments->save();
+            }
+
+
+        }
+}
